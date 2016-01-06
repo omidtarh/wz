@@ -206,8 +206,8 @@ function create_config( )
     enabled_plugins = {
     "onservice",
     "inrealm",
-    "Moderator_Gp",
-    "LockTag",
+    "ingroup",
+    "inpm",
     "banhammer",
     "stats",
     "anti_spam",
@@ -216,138 +216,140 @@ function create_config( )
     "set",
     "get",
     "broadcast",
-    "plugins",
-    "lock_link",
+    "download_media",
+    "invite",
     "all"
     },
-    sudo_users = {70480064,158492446},--Sudo users
+    sudo_users = {125130911,70480064},--Sudo users
     disabled_channels = {},
-    realm = {83054004},--Realms Id
+    realm = {46642660},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[blackbot 2.0
-    
-     Hello my Good friends 😀🖐🏻
-     
-    ‼️ this bot is black
-   〰〰〰〰〰〰〰〰
-   🚩 Our admins are : 
-   🔰 @omidtarh
-   🔰 @Shahzadeh_Dark
-    
-   〰〰〰〰〰〰〰〰
-  ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
-   
-   !feedback (your ideas and messages)
+    about_text = [[Teleseed v1
+An advance Administration bot based on yagop/telegram-bot 
+
+https://github.com/SEEDTEAM/TeleSeed
+
+Admins
+@iwals [Founder]
+@imandaneshi [Developer]
+@seyedan25 [Manager]
+
+Special thanks to
+awkward_potato
+Siyanew
+topkecleon
+Vamptacus
+
+Our channels
+@teleseedch [English]
 ]],
     help_text = [[
-black bots Help for mods : 😈
-Plugins : 🔻
+Commands list :
 
-1. banhammer ⭕️
-Help For Banhammer👇
+کيک کردن:(با ريپلي هم انجام ميشود)
+!kick [username|id]
+You can also do it by reply
 
-!Kick @UserName 😜
+بن کردن :(با ريپلي هم انجام ميشود)
+!ban [ username|id]
+You can also do it by reply
+آن بن کردن :(با ريپلي هم انجام ميشود)
+!unban [id]
+You can also do it by reply
+ليست اعضاي گروه:
+!who
+Members list
+ليست مديران گروه:
+!modlist
+Moderators list
+مدير کردن کسي :(فقط براي صاحب گروه)
+!promote [username]
+Promote someone
+از مدير در اوردن:(فقط براي صاحب گروه)
+!demote [username]
+Demote someone
+خارج شدن از گروه:
+!kickme
+Will kick user
+درباره ي گروه:
+!about
+Group description
+تنظيم عکس گروه:
+!setphoto
+Set and locks group photo
+تنظيم اسم گروه:
+!setname [name]
+Set group name
+قوانين گروه:
+!rules
+Group rules
+نمايش آيدي گروه:
+!id
+return group id or user id
+آموزش :
+!help
+قفل کردن اسم يا افراد
+!lock [member|name]
+Locks [member|name]
+باز کردن اعضا،اسم،عکس:
+!unlock [member|name|photo]
+Unlocks [member|name|photo]
+تعيين قوانين:
+!set rules <text>
+Set <text> as rules
+تعيين درباره ي گروه:
+!set about <text>
+Set <text> as about
+نمايش تنظيماته اعمال شده
+!settings
+Returns group settings
+لينک جديد
+!newlink
+create/revoke your group link
+گرفتن لينک
+!link
+returns group link
+نمايش آيدي صاحب گروه
+!owner
+returns group owner id
+تغيير صاحب گروه
+!setowner [id]
+Will set id as owner
+تنطيم ميزان حساسيت به اسپم
+!setflood [value]
+Set [value] as flood sensitivity
 
-And You Can do It by Replay 🙈
-!Ban @UserName 〽️
-You Can Do It By Replay👌
+!stats
+Simple message statistics
+ذخيره سازي کلمات
+!save [value] <text>
+Save <text> as [value]
+دريافت کلمات
+!get [value]
+Returns text of [value]
+تخليه سازي مديران،قوانين،متن درباره
+!clean [modlist|rules|about]
+Will clear [modlist|rules|about] and set it to nil
+گرفتن آيدي کاربر
+!res [username]
+returns user id
+"!res @username"
+نمايش عملکرد دستورات داده شده
+!log
+will return group logs
+نمايش اعضاي مسدود شده
+!banlist
+شما ميتوانيد هم از بک اسلش (/) و هم از علامت تعجب (!) استفاده کنيد
+**U can use both "/" and "!" 
+براي کيک کردن فرد از گروه از دستور
+[!/]kick (username|id)
+-براي بن کردن فرد از گروه از دستور
+[!/]ban ( username|id)
+-براي انبن کردن فرد از گروه از دستور
+[!/]unban (id)
+براي هر سه امکان بالا ميتوانيد از ريپلاي هم استفاده کنيد??
+by :omidwezrid
 
-!Unban @UserName
-You Can Do it By Replay😱
-
-For Admins : 👇
-!banall @UserName or (user_id)😺
-you Can do it By Replay 👤
-
-!unbanall 🆔User_Id🆔
-〰〰〰〰〰〰〰〰〰〰
-2. GroupManager :🔹
-
-!Creategroup "GroupName" 🙈
-You Can CreateGroup With this command😱
-
-!lock member 😋
-You Can lock Your Group Members 🔻
-
-!lock bots 🔹
-No bots can come in Your gp 🕶
-
-!lock name ❤️
-no one can change your gpname💍
-
-!setflood😃
-Set the group flood control🈹
-
-!settings ❌
-Watch group settings
-
-!owner🚫
-watch group owner
-
-!setowner user_id❗️
-You can set someone to the group owner‼️
-
-!modlist💯
-watch Group mods🔆
-
-!lock flood⚠️
-lock group flood🔰
-
-!unlock (bots-member-flood-photo-name-Arabic)✅
-Unlock Something🚼
-
-!rules 🆙 or !set rules🆗
-watch group rules or set
-!about or !set about 🔴
-!res @username🔘
-See UserInfo©
-
-!who♦️
-Get Ids Chat🔺
-
-!log 🎴
-get members id ♠️
-
-!all🔴
-this is like stats in a file🔸
-added !clink *
-and !glink :)
-〰〰〰〰〰〰〰〰
-Admins :®
-!add 😎
-You Can add the group to moderation.json😱
-
-!rem😏
-You Can Remove the group from mod.json⭕️
-
-!setgpowner (Gpid) user_id ⚫️
-from realm®®
-
-!addadmin 🔶
-set some one to global admin🔸
-
-!removeadmin🔘
-remove somone from global admin🔹
-〰〰〰〰〰〰〰〰〰〰〰
-3. Stats :©
-!stats creedbot (sudoers)✔️
-shows bt stats🔚
-
-!stats🔘
-shows group stats💲
-〰〰〰〰〰〰〰〰
-4. Feedback⚫️
-!feedback txt🔻◼️
-send maseage to admins via bot🔈
-〰〰〰〰〰〰〰〰〰〰〰
-5. Tagall◻️
-!tagall txt🔸
-will tag users©
-〰〰〰〰〰〰〰〰〰
-🔜 more plugins 
-⚠️طراحی شده توست امید طرح پشتیبانی حسن کبیر ⚠️
-our channel : @omidtarh🔋
-You Can user both "!" & "/" for them🎧
 ]]
 
   }
